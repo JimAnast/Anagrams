@@ -54,7 +54,7 @@ if __name__ == '__main__':
     print("Now we will print all the lists of words that are anagrams and contain n letters.")
     num = int(input("Enter the number of letters that the words will have: "))
     di = make_anagram_dict_with_num(all_words)
-    new_lists = []                               #new lists that will contain only the groups of words with num letters.
+    new_lists = []                                #new lists that will contain only the groups of words with num letters.
     for list_of_words in di.values():
         new_lists.append(list_of_words)
     new_lists.sort(key=len)
