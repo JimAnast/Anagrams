@@ -1,5 +1,5 @@
 all_words = []
-with open(r'words.txt', 'r') as f:      #declare the local path for the opening of the file. 
+with open(r'words.txt', 'r') as f:          #declare the local path for the opening of the file. 
     for line in f:                      
         for word in line.split():
             all_words.append(word)          #create a list that contains all of the words of the file.
@@ -20,7 +20,7 @@ def create_anagram_dict(all_words):
 def make_anagram_dict_with_num(all_words):   #this is for dictionary only for the words with n letters.
     d = {}
     for word in all_words:
-      if len(word) == num:                  #keep only the words that have letters = num given by the user.
+      if len(word) == num:                   #keep only the words that have letters = num given by the user.
           word = word.lower()
           key = ''.join(sorted(word))
           if key in d:
@@ -54,7 +54,7 @@ if __name__ == '__main__':
     print("Now we will print all the lists of words that are anagrams and contain n letters.")
     num = int(input("Enter the number of letters that the words will have: "))
     di = make_anagram_dict_with_num(all_words)
-    new_lists = []                         #new lists that will contain only the groups of words with num letters.
+    new_lists = []                               #new lists that will contain only the groups of words with num letters.
     for list_of_words in di.values():
         new_lists.append(list_of_words)
     new_lists.sort(key=len)
