@@ -1,8 +1,6 @@
-#This is my solution for problem 2. You may as well find more explanations and instructions in the PDF file.
-
 all_words = []
-with open(r'words.txt', 'r') as f:      #declare the local path for the opening of the file. I put it in the same
-    for line in f:                      #folder with the .py file.
+with open(r'words.txt', 'r') as f:      #declare the local path for the opening of the file. 
+    for line in f:                      
         for word in line.split():
             all_words.append(word)          #create a list that contains all of the words of the file.
 
